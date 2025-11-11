@@ -17,11 +17,11 @@ const Hero = () => {
       
       <div className="relative z-10 container mx-auto px-6 py-32 text-center text-white">
         <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-          Arquitetura de Luxo
+          Engenharia de Luxo
         </h1>
         <p className="font-inter text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-light">
-          Transformando espaços em obras de arte. Projetos exclusivos que harmonizam elegância, 
-          sustentabilidade e sofisticação.
+          Soluções técnicas inovadoras para imóveis de alto padrão. Excelência em estruturas, 
+          sistemas e tecnologia de ponta.
         </p>
         <Button 
           size="lg" 

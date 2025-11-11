@@ -6,17 +6,17 @@ import project3 from "@/assets/project-3.jpg";
 const projects = [
   {
     title: "Residência Verde Esmeralda",
-    description: "Interior contemporâneo com jardim vertical integrado",
+    description: "Sistema de climatização integrada e automação residencial",
     image: project1,
   },
   {
     title: "Villa Sustentável",
-    description: "Arquitetura moderna com jardins verticais",
+    description: "Estrutura inteligente com captação solar e reuso de água",
     image: project2,
   },
   {
     title: "Cobertura Urbana",
-    description: "Terraço de luxo com vista panorâmica",
+    description: "Engenharia estrutural para terraço suspenso premium",
     image: project3,
   },
 ];
@@ -30,8 +30,8 @@ const Portfolio = () => {
             Projetos Exclusivos
           </h2>
           <p className="font-inter text-lg text-muted-foreground max-w-2xl mx-auto">
-            Cada projeto é uma obra única, criada especialmente para refletir 
-            a visão e o estilo de vida dos nossos clientes.
+            Cada projeto é desenvolvido com tecnologia de ponta e precisão técnica, 
+            garantindo soluções de engenharia que superam expectativas.
           </p>
         </div>
 

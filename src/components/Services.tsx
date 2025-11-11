@@ -3,23 +3,23 @@ import { Home, PenTool, Trees, Building2 } from "lucide-react";
 const services = [
   {
     icon: Home,
-    title: "Projetos Residenciais",
-    description: "Casas e residências de luxo personalizadas, do conceito à execução.",
+    title: "Engenharia Estrutural",
+    description: "Cálculos e projetos estruturais de alta complexidade para imóveis de luxo.",
   },
   {
     icon: Building2,
-    title: "Arquitetura Comercial",
-    description: "Espaços corporativos sofisticados que impressionam e inspiram.",
+    title: "Sistemas Prediais",
+    description: "Instalações elétricas, hidráulicas e HVAC de última geração.",
   },
   {
     icon: PenTool,
-    title: "Design de Interiores",
-    description: "Ambientes refinados que combinam estética e funcionalidade.",
+    title: "Automação Residencial",
+    description: "Tecnologia inteligente para máximo conforto e eficiência.",
   },
   {
     icon: Trees,
-    title: "Arquitetura Sustentável",
-    description: "Soluções eco-friendly que respeitam o meio ambiente.",
+    title: "Engenharia Sustentável",
+    description: "Sistemas de energia renovável e eficiência energética.",
   },
 ];
 
@@ -32,7 +32,7 @@ const Services = () => {
             Nossos Serviços
           </h2>
           <p className="font-inter text-lg text-muted-foreground max-w-2xl mx-auto">
-            Oferecemos soluções completas em arquitetura e design para 
+            Oferecemos soluções completas em engenharia e tecnologia para 
             transformar suas ideias em realidade.
           </p>
         </div>

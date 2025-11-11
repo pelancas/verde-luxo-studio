@@ -10,8 +10,8 @@ const Contact = () => {
             Vamos Criar Algo Extraordinário
           </h2>
           <p className="font-inter text-lg mb-12 opacity-90">
-            Entre em contato conosco para discutir seu próximo projeto de luxo. 
-            Estamos prontos para transformar sua visão em realidade.
+            Entre em contato conosco para discutir seu próximo projeto de engenharia. 
+            Estamos prontos para desenvolver soluções técnicas inovadoras.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -26,7 +26,7 @@ const Contact = () => {
               <div className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center mb-4">
                 <Mail className="w-6 h-6" />
               </div>
-              <p className="font-inter font-medium">contato@arquiteturaluxo.com</p>
+              <p className="font-inter font-medium">contato@engenharialuxo.com</p>
             </div>
 
             <div className="flex flex-col items-center">

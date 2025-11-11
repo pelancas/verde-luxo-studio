@@ -7,14 +7,14 @@ const About = () => {
             Excelência em Cada Detalhe
           </h2>
           <p className="font-inter text-lg text-muted-foreground mb-8 leading-relaxed">
-            Especializados em projetos arquitetônicos de alto padrão, criamos espaços únicos 
-            que refletem a personalidade e os valores dos nossos clientes. Cada projeto é 
-            desenvolvido com atenção meticulosa aos detalhes, incorporando as mais recentes 
-            tendências em design sustentável e tecnologia.
+            Especializados em engenharia para imóveis de alto padrão, desenvolvemos soluções 
+            técnicas personalizadas que garantem segurança, eficiência e inovação. Cada projeto é 
+            executado com precisão absoluta, incorporando as mais recentes tecnologias em 
+            estruturas, sistemas prediais e automação.
           </p>
           <p className="font-inter text-lg text-muted-foreground leading-relaxed">
-            Nossa filosofia combina estética contemporânea com funcionalidade excepcional, 
-            sempre respeitando o meio ambiente e promovendo o bem-estar dos ocupantes.
+            Nossa abordagem une expertise técnica com soluções sustentáveis, garantindo 
+            eficiência energética, durabilidade e máximo conforto aos ocupantes.
           </p>
         </div>
       </div>
