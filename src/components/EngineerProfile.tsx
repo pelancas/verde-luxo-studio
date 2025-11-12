@@ -11,8 +11,8 @@ const EngineerProfile = () => {
 
   const stats = [
     { icon: Building2, label: "Projetos Executados", value: "150+" },
-    { icon: Award, label: "Anos de Experiência", value: "20+" },
-    { icon: GraduationCap, label: "Certificações", value: "12" },
+    { icon: Award, label: "Anos de Experiência", value: "35+" },
+    { icon: GraduationCap, label: "Área construida", value: "+400 mil m²" },
   ];
 
   return (
@@ -33,11 +33,12 @@ const EngineerProfile = () => {
               Eng. Evandro Lara
             </h3>
             <p className="font-inter text-lg text-muted-foreground mb-6">
-              Com mais de 35 anos de experiência na construção civil de alto padrão, 
+              Com mais de 35 anos de experiência na construção civil, 
               o fundador da GEHAUS Engenharia construiu uma trajetória sólida em gestão de obras e incorporação imobiliária. 
-              Atuou como sócio-diretor da Construtora Tempo, gerente de obras no Grupo EPO e, desde 1997, 
-              lidera a GEHAUS Engenharia, referência em empreendimentos sustentáveis e de alto padrão. 
-              Sua carreira é marcada pela excelência técnica, visão empreendedora e compromisso com a qualidade..
+              Já participou da execução de mais de 400 mil m² construídos, com sua experiência no Grupo EPO, 
+              como sócio-diretor da Construtora Tempo e, desde 1997, na GEHAUS Engenharia, 
+              como referência em empreendimentos sustentáveis e de alto padrão. 
+              Sua carreira é marcada pela excelência técnica, visão empreendedora e compromisso com a qualidade.
             </p>
 
             <div className="grid grid-cols-3 gap-4 mb-8">
@@ -74,7 +75,7 @@ const EngineerProfile = () => {
               <div className="aspect-[3/4] overflow-hidden rounded-lg shadow-2xl">
                 <img
                   src={engineerPhoto}
-                  alt="Eng. Ricardo Mendes - Engenheiro Civil Responsável"
+                  alt="Eng. Evandro Lara - Engenheiro Civil Responsável"
                   className="w-full h-full object-cover"
                 />
               </div>

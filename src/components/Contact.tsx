@@ -19,21 +19,21 @@ const Contact = () => {
               <div className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center mb-4">
                 <Phone className="w-6 h-6" />
               </div>
-              <p className="font-inter font-medium">+55 (11) 9999-9999</p>
+              <p className="font-inter font-medium">+55 (31) 99949-9060</p>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center mb-4">
                 <Mail className="w-6 h-6" />
               </div>
-              <p className="font-inter font-medium">contato@engenharialuxo.com</p>
+              <p className="font-inter font-medium">evandro@gehaus.com.br</p>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center mb-4">
                 <MapPin className="w-6 h-6" />
               </div>
-              <p className="font-inter font-medium">São Paulo, SP</p>
+              <p className="font-inter font-medium">Belo Horizonte, MG</p>
             </div>
           </div>
 
