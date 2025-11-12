@@ -23,7 +23,7 @@ const Hero = () => {
           className="w-full h-full object-contain"
           style={{
             backgroundPosition: "center",
-            width: "180px",
+            width: "300px",
             margin: "0 auto",
         }}
         />
