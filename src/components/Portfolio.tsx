@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -6,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import ProjectGallery from "./ProjectGallery";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
@@ -29,6 +31,8 @@ const projects = [
 ];
 
 const Portfolio = () => {
+  const [selectedProject, setSelectedProject] = useState<number | null>(null);
+
   return (
     <section className="py-24 bg-secondary/30">
       <div className="container mx-auto px-6">
@@ -52,12 +56,15 @@ const Portfolio = () => {
           <CarouselContent>
             {projects.map((project, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
-                <Card className="overflow-hidden border-border bg-card h-full">
+                <Card 
+                  className="overflow-hidden border-border bg-card h-full cursor-pointer hover:shadow-lg transition-shadow"
+                  onClick={() => setSelectedProject(index)}
+                >
                   <div className="aspect-[16/10] overflow-hidden">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <CardContent className="p-6">
@@ -75,6 +82,14 @@ const Portfolio = () => {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
+
+        {selectedProject !== null && (
+          <ProjectGallery
+            isOpen={selectedProject !== null}
+            onClose={() => setSelectedProject(null)}
+            projectTitle={projects[selectedProject].title}
+          />
+        )}
       </div>
     </section>
   );
