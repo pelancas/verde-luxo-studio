@@ -1,46 +1,48 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import infrastructureImg from "@/assets/gallery-infrastructure-1.jpg";
-import foundationImg from "@/assets/gallery-foundation-1.jpg";
-import equipmentImg from "@/assets/gallery-equipment-1.jpg";
-import cadImg from "@/assets/gallery-cad-1.jpg";
-import finishingImg from "@/assets/gallery-finishing-1.jpg";
 
 interface ProjectGalleryProps {
   isOpen: boolean;
   onClose: () => void;
   projectTitle: string;
+  galleryImages: {
+    infrastructure: string[];
+    foundation: string[];
+    equipment: string[];
+    cad: string[];
+    finishing: string[];
+  };
 }
 
-const galleryCategories = [
-  {
-    id: "infrastructure",
-    label: "Infraestrutura",
-    images: [infrastructureImg, infrastructureImg, infrastructureImg],
-  },
-  {
-    id: "foundation",
-    label: "Terraplanagem e Fundação",
-    images: [foundationImg, foundationImg, foundationImg],
-  },
-  {
-    id: "equipment",
-    label: "Máquinas e Equipamentos",
-    images: [equipmentImg, equipmentImg, equipmentImg],
-  },
-  {
-    id: "cad",
-    label: "Desenho e CAD",
-    images: [cadImg, cadImg, cadImg],
-  },
-  {
-    id: "finishing",
-    label: "Acabamento",
-    images: [finishingImg, finishingImg, finishingImg],
-  },
-];
+const ProjectGallery = ({ isOpen, onClose, projectTitle, galleryImages }: ProjectGalleryProps) => {
+  const galleryCategories = [
+    {
+      id: "infrastructure",
+      label: "Infraestrutura",
+      images: galleryImages.infrastructure,
+    },
+    {
+      id: "foundation",
+      label: "Terraplanagem e Fundação",
+      images: galleryImages.foundation,
+    },
+    {
+      id: "equipment",
+      label: "Máquinas e Equipamentos",
+      images: galleryImages.equipment,
+    },
+    {
+      id: "cad",
+      label: "Desenho e CAD",
+      images: galleryImages.cad,
+    },
+    {
+      id: "finishing",
+      label: "Acabamento",
+      images: galleryImages.finishing,
+    },
+  ];
 
-const ProjectGallery = ({ isOpen, onClose, projectTitle }: ProjectGalleryProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto">

@@ -11,22 +11,58 @@ import ProjectGallery from "./ProjectGallery";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
+import project1Infrastructure from "@/assets/project1-infrastructure.jpg";
+import project1Foundation from "@/assets/project1-foundation.jpg";
+import project1Equipment from "@/assets/project1-equipment.jpg";
+import project1Cad from "@/assets/project1-cad.jpg";
+import project1Finishing from "@/assets/project1-finishing.jpg";
+import project2Infrastructure from "@/assets/project2-infrastructure.jpg";
+import project2Foundation from "@/assets/project2-foundation.jpg";
+import project2Equipment from "@/assets/project2-equipment.jpg";
+import project2Cad from "@/assets/project2-cad.jpg";
+import project2Finishing from "@/assets/project2-finishing.jpg";
+import project3Infrastructure from "@/assets/project3-infrastructure.jpg";
+import project3Foundation from "@/assets/project3-foundation.jpg";
+import project3Equipment from "@/assets/project3-equipment.jpg";
+import project3Cad from "@/assets/project3-cad.jpg";
+import project3Finishing from "@/assets/project3-finishing.jpg";
 
 const projects = [
   {
     title: "Residência Verde Esmeralda",
     description: "Sistema de climatização integrada e automação residencial",
     image: project1,
+    gallery: {
+      infrastructure: [project1Infrastructure],
+      foundation: [project1Foundation],
+      equipment: [project1Equipment],
+      cad: [project1Cad],
+      finishing: [project1Finishing],
+    },
   },
   {
     title: "Villa Sustentável",
     description: "Estrutura inteligente com captação solar e reuso de água",
     image: project2,
+    gallery: {
+      infrastructure: [project2Infrastructure],
+      foundation: [project2Foundation],
+      equipment: [project2Equipment],
+      cad: [project2Cad],
+      finishing: [project2Finishing],
+    },
   },
   {
     title: "Cobertura Urbana",
     description: "Engenharia estrutural para terraço suspenso premium",
     image: project3,
+    gallery: {
+      infrastructure: [project3Infrastructure],
+      foundation: [project3Foundation],
+      equipment: [project3Equipment],
+      cad: [project3Cad],
+      finishing: [project3Finishing],
+    },
   },
 ];
 
@@ -88,6 +124,7 @@ const Portfolio = () => {
             isOpen={selectedProject !== null}
             onClose={() => setSelectedProject(null)}
             projectTitle={projects[selectedProject].title}
+            galleryImages={projects[selectedProject].gallery}
           />
         )}
       </div>
