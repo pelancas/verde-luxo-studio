@@ -23,13 +23,10 @@ const Hero = () => {
           className="w-full h-full object-contain"
           style={{
           backgroundSize: 'contain',
-          backgroundPosition: 'center',
           width: "180px",
         }}
         />
-        <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-          Gehaus Engenharia
-        </h1>
+
         <p className="font-inter text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-light">
           Soluções técnicas inovadoras para imóveis de alto padrão. Excelência em estruturas, 
           sistemas e tecnologia de ponta.
