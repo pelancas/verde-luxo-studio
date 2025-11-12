@@ -25,6 +25,7 @@ const Hero = () => {
             backgroundPosition: "center",
             width: "500px",
             margin: "0 auto",
+            opacity: 0.6,
         }}
         />
         <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6 tracking-tight">
