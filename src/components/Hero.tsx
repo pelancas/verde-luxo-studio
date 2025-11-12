@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-architecture.jpg";
-import engineerPhoto from "@/assets/ProfileEvandro.jpg";
+import logoGehaus from "@/assets/gehauslogobrancargb.png";
 
 const Hero = () => {
   return (
@@ -9,8 +9,9 @@ const Hero = () => {
         className="absolute inset-0 z-0"
         style={{
           backgroundImage: `url(${heroImage})`,
-          backgroundSize: 'cover',
+          backgroundSize: 'contain',
           backgroundPosition: 'center',
+          width: "180px",
         }}
       >
         <div className="absolute inset-0 bg-foreground/40" />
@@ -18,10 +19,10 @@ const Hero = () => {
       
       <div className="relative z-10 container mx-auto px-6 py-32 text-center text-white">
         <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-          Gehaus, Engenharia de Luxo
+          Gehaus Engenharia
         </h1>
             <img
-              src={engineerPhoto}
+              src={logoGehaus}
               alt="Eng. Evandro Lara - Engenheiro Civil Responsável"
               className="w-full h-full object-cover"
             />
