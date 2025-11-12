@@ -9,9 +9,8 @@ const Hero = () => {
         className="absolute inset-0 z-0"
         style={{
           backgroundImage: `url(${heroImage})`,
-          backgroundSize: 'contain',
+          backgroundSize: 'cover',
           backgroundPosition: 'center',
-          width: "180px",
         }}
       >
         <div className="absolute inset-0 bg-foreground/40" />
@@ -24,7 +23,7 @@ const Hero = () => {
             <img
               src={logoGehaus}
               alt="Eng. Evandro Lara - Engenheiro Civil Responsável"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
         <p className="font-inter text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-light">
           Soluções técnicas inovadoras para imóveis de alto padrão. Excelência em estruturas, 
