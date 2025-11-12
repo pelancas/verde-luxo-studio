@@ -1,4 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
@@ -35,30 +42,39 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <Card 
-              key={index} 
-              className="overflow-hidden border-border hover:shadow-xl transition-shadow duration-300 bg-card"
-            >
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="font-playfair text-2xl font-semibold mb-2 text-card-foreground">
-                  {project.title}
-                </h3>
-                <p className="font-inter text-muted-foreground">
-                  {project.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-6xl mx-auto"
+        >
+          <CarouselContent>
+            {projects.map((project, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
+                <Card className="overflow-hidden border-border bg-card h-full">
+                  <div className="aspect-[16/10] overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="font-playfair text-2xl font-semibold mb-2 text-card-foreground">
+                      {project.title}
+                    </h3>
+                    <p className="font-inter text-muted-foreground">
+                      {project.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
     </section>
   );
