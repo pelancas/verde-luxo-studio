@@ -22,8 +22,9 @@ const Hero = () => {
           alt="Eng. Evandro Lara - Engenheiro Civil Responsável"
           className="w-full h-full object-contain"
           style={{
-
-          width: "180px",
+            backgroundPosition: "center",
+            width: "180px",
+            margin: "0 auto",
         }}
         />
 
