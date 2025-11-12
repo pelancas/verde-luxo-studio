@@ -1,13 +1,12 @@
 import { Award, GraduationCap, Building2, CheckCircle2 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import engineerPhoto from "@/assets/engineer-profile.jpg";
+import engineerPhoto from "@/assets/ProfileEvandro.jpg";
 
 const EngineerProfile = () => {
   const qualifications = [
     "CREA Ativo - Registro Profissional",
     "Especialização em Estruturas de Alto Padrão",
-    "MBA em Gestão de Projetos Complexos",
-    "Certificação LEED em Construção Sustentável",
+    "MBA em Gestão de Projetos ",
   ];
 
   const stats = [
@@ -31,12 +30,14 @@ const EngineerProfile = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div className="order-2 lg:order-1">
             <h3 className="font-playfair text-3xl font-bold mb-4 text-foreground">
-              Eng. Ricardo Mendes
+              Eng. Evandro Lara
             </h3>
             <p className="font-inter text-lg text-muted-foreground mb-6">
-              Engenheiro Civil especializado em projetos de alto padrão, com mais de duas 
-              décadas de experiência em construções de luxo. Formado pela Universidade de 
-              São Paulo (USP), possui especializações em estruturas complexas e sustentabilidade.
+              Com mais de 35 anos de experiência na construção civil de alto padrão, 
+              o fundador da GEHAUS Engenharia construiu uma trajetória sólida em gestão de obras e incorporação imobiliária. 
+              Atuou como sócio-diretor da Construtora Tempo, gerente de obras no Grupo EPO e, desde 1997, 
+              lidera a GEHAUS Engenharia, referência em empreendimentos sustentáveis e de alto padrão. 
+              Sua carreira é marcada pela excelência técnica, visão empreendedora e compromisso com a qualidade..
             </p>
 
             <div className="grid grid-cols-3 gap-4 mb-8">
@@ -78,7 +79,7 @@ const EngineerProfile = () => {
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-6 rounded-lg shadow-xl">
-                <p className="font-playfair text-4xl font-bold">20+</p>
+                <p className="font-playfair text-4xl font-bold">35+</p>
                 <p className="font-inter text-sm">Anos de Excelência</p>
               </div>
             </div>
