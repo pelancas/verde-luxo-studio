@@ -10,6 +10,7 @@ import project1Equipment from "@/assets/project1-equipment.jpg";
 import project1Cad from "@/assets/project1-cad.jpg";
 import project1Finishing from "@/assets/project1-finishing.jpg";
 import project2Infrastructure from "@/assets/project2-infrastructure.jpg";
+import project2Infrastructure2 from "@/assets/project2-infrastructure-2.jpg";
 import project2Foundation from "@/assets/project2-foundation.jpg";
 import project2Equipment from "@/assets/project2-equipment.jpg";
 import project2Cad from "@/assets/project2-cad.jpg";
@@ -38,7 +39,7 @@ const projects = [
     description: "Estrutura inteligente com captação solar e reuso de água",
     image: project2,
     gallery: {
-      infrastructure: [project2Infrastructure],
+      infrastructure: [project2Infrastructure, project2Infrastructure2],
       foundation: [project2Foundation],
       equipment: [project2Equipment],
       cad: [project2Cad],
