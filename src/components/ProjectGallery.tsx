@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 interface ProjectGalleryProps {
   isOpen: boolean;
@@ -15,6 +17,8 @@ interface ProjectGalleryProps {
 }
 
 const ProjectGallery = ({ isOpen, onClose, projectTitle, galleryImages }: ProjectGalleryProps) => {
+  const [selectedCategory, setSelectedCategory] = useState("infrastructure");
+  
   const galleryCategories = [
     {
       id: "infrastructure",
@@ -50,7 +54,24 @@ const ProjectGallery = ({ isOpen, onClose, projectTitle, galleryImages }: Projec
           <DialogTitle className="font-playfair text-3xl">{projectTitle}</DialogTitle>
         </DialogHeader>
         
-        <Tabs defaultValue="infrastructure" className="w-full">
+        {/* Mobile: Select Dropdown */}
+        <div className="md:hidden mb-6">
+          <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+            <SelectTrigger className="w-full">
+              <SelectValue placeholder="Selecione uma categoria" />
+            </SelectTrigger>
+            <SelectContent>
+              {galleryCategories.map((category) => (
+                <SelectItem key={category.id} value={category.id}>
+                  {category.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+
+        {/* Desktop: Tabs */}
+        <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full hidden md:block">
           <TabsList className="grid w-full grid-cols-5">
             {galleryCategories.map((category) => (
               <TabsTrigger 
@@ -62,10 +83,13 @@ const ProjectGallery = ({ isOpen, onClose, projectTitle, galleryImages }: Projec
               </TabsTrigger>
             ))}
           </TabsList>
-          
+        </Tabs>
+
+        {/* Gallery Content (shared by both mobile and desktop) */}
+        <div className="mt-6">
           {galleryCategories.map((category) => (
-            <TabsContent key={category.id} value={category.id} className="mt-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            selectedCategory === category.id && (
+              <div key={category.id} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {category.images.map((image, index) => (
                   <div 
                     key={index} 
@@ -79,9 +103,9 @@ const ProjectGallery = ({ isOpen, onClose, projectTitle, galleryImages }: Projec
                   </div>
                 ))}
               </div>
-            </TabsContent>
+            )
           ))}
-        </Tabs>
+        </div>
       </DialogContent>
     </Dialog>
   );
