@@ -74,28 +74,30 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="flex flex-col gap-6 max-w-5xl mx-auto">
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="overflow-hidden border-border bg-card h-full cursor-pointer hover:shadow-lg transition-shadow"
+              className="overflow-hidden border-border bg-card cursor-pointer hover:shadow-lg transition-shadow"
               onClick={() => setSelectedProject(index)}
             >
-              <div className="aspect-[16/10] overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
+              <div className="flex flex-col md:flex-row">
+                <div className="md:w-2/5 aspect-[16/10] md:aspect-auto overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardContent className="md:w-3/5 p-6 flex flex-col justify-center">
+                  <h3 className="font-playfair text-2xl md:text-3xl font-semibold mb-3 text-card-foreground">
+                    {project.title}
+                  </h3>
+                  <p className="font-inter text-lg text-muted-foreground">
+                    {project.description}
+                  </p>
+                </CardContent>
               </div>
-              <CardContent className="p-6">
-                <h3 className="font-playfair text-2xl font-semibold mb-2 text-card-foreground">
-                  {project.title}
-                </h3>
-                <p className="font-inter text-muted-foreground">
-                  {project.description}
-                </p>
-              </CardContent>
             </Card>
           ))}
         </div>
