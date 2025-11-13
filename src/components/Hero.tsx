@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-architecture.jpg";
 import logoGehaus from "@/assets/gehauslogobrancargb.png";
 
@@ -35,12 +36,14 @@ const Hero = () => {
           Soluções técnicas inovadoras para imóveis de alto padrão. Excelência em estruturas, 
           sistemas e tecnologia de ponta.
         </p>
-        <Button 
-          size="lg" 
-          className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter font-medium text-lg px-8 py-6"
-        >
-          Conheça Nossos Projetos
-        </Button>
+        <Link to="/projetos">
+          <Button 
+            size="lg" 
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter font-medium text-lg px-8 py-6"
+          >
+            Conheça Nossos Projetos
+          </Button>
+        </Link>
       </div>
     </section>
   );
