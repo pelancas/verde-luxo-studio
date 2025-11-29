@@ -23,7 +23,7 @@ import project3Finishing from "@/assets/project3-finishing.jpg";
 
 const projects = [
   {
-    title: "Residência Verde Esmeralda",
+    title: "Residencia IC Lagoa Santa",
     description: "Sistema de climatização integrada e automação residencial",
     image: project1,
     gallery: {
