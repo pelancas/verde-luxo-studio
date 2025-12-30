@@ -12,6 +12,8 @@ const Hero = () => {
         <div className="absolute inset-0 bg-foreground/40" />
       </div>
       
+      <div className="relative z-10 container mx-auto px-6 py-32 text-center text-white">
+        
         <Link to="/projetos">
           <button className="bg-primary hover:bg-primary/30 p-4 rounded-lg transition cursor-pointer shadow-md hover:shadow-lg" style={{
           width: "200px",
@@ -21,8 +23,6 @@ const Hero = () => {
           </button>
           
         </Link>
-      <div className="relative z-10 container mx-auto px-6 py-32 text-center text-white">
-        
         <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6 tracking-tight">
           Sofisticação Construtiva   
         </h1>
