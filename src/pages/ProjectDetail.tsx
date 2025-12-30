@@ -81,7 +81,7 @@ const ProjectGalleryAuto = () => {
                 className={`px-4 py-2 rounded-lg font-medium transition-all ${
                   currentProject === slug
                     ? 'bg-primary text-white shadow-md'
-                    : 'bg-secondary/30 text-slate-100 hover:bg-primary/90 border border-slate-200'
+                    : 'bg-white text-slate-100 hover:bg-primary/90 border border-slate-200'
                 }`}
               >
                 {proj.title}
