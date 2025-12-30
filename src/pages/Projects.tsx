@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
+import project1 from "@/assets/projects/residencia-ic-lagoa-santa/main.jpg";
+import project2 from "@/assets/projects/villa-sustentavel/main.jpg";
+import project3 from "@/assets/projects/cobertura-urbana/main.jpg";
 
 const projects = [
   {
