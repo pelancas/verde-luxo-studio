@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
+import Contact from "@/components/Contact";
 import project1 from "@/assets/projects/residencia-ic-lagoa-santa/main.jpg";
 import project2 from "@/assets/projects/villa-sustentavel/main.jpg";
 import project3 from "@/assets/projects/cobertura-urbana/main.jpg";
@@ -64,6 +65,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
+      <Contact />
     </div>
   );
 };
