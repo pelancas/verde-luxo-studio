@@ -1,5 +1,6 @@
 import { ArrowLeft, ZoomIn, X } from "lucide-react";
 import { useState } from "react";
+import Contact from "@/components/Contact";
 
 // ==============================================
 // CONFIGURAÇÃO DOS PROJETOS
@@ -181,6 +182,7 @@ const ProjectGalleryAuto = () => {
           />
         </div>
       )}
+      <Contact />
     </div>
   );
 };
