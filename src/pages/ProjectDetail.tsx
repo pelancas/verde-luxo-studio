@@ -79,8 +79,8 @@ const ProjectGalleryAuto = () => {
                 onClick={() => setCurrentProject(slug)}
                 className={`px-4 py-2 rounded-lg font-medium transition-all ${
                   currentProject === slug
-                    ? 'bg-slate-900 text-white shadow-md'
-                    : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
+                    ? 'bg-primary text-white shadow-md'
+                    : 'bg-white text-slate-700 hover:bg-primary/90 border border-slate-200'
                 }`}
               >
                 {proj.title}
