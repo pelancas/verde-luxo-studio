@@ -18,17 +18,19 @@ const Hero = () => {
       </div>
       
       <div className="relative z-10 container mx-auto px-6 py-32 text-center text-white">
-        <img
-          src={logoGehaus}
-          alt="Eng. Evandro Lara - Engenheiro Civil Responsável"
-          className="w-full h-full object-contain"
-          style={{
-            backgroundPosition: "center",
-            width: "500px",
-            margin: "0 auto",
-            opacity: 0.6,
-        }}
-        />
+        
+        <Link to="/projetos">
+          <button
+            className="bg-green-600 hover:bg-green-700 p-4 rounded-lg transition cursor-pointer shadow-md hover:shadow-lg"
+            style={{ width: "500px", margin: "0 auto" }}
+          >
+            <img
+              src={logoGehaus}
+              alt="Logo"
+              className="w-full h-full object-contain opacity-60 hover:opacity-100 transition"
+            />
+          </button>
+        </Link>
         <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6 tracking-tight">
           Gehaus Engenharia
         </h1>
