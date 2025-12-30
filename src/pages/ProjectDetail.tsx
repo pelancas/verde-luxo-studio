@@ -1,9 +1,9 @@
 import { ArrowLeft, ZoomIn, X } from "lucide-react";
 import { useState } from "react";
 
-// ============================================
+// ==============================================
 // CONFIGURAÇÃO DOS PROJETOS
-// ============================================
+// ==============================================
 const projectsData: Record<string, {
   title: string;
   description: string;
