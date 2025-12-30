@@ -1,213 +1,188 @@
-import { useParams, Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowLeft, ZoomIn, X } from "lucide-react";
 import { useState } from "react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-// Project 1 - Residencia IC Lagoa Santa
-import project1Main from "@/assets/projects/residencia-ic-lagoa-santa/main.jpg";
-import project1Infrastructure from "@/assets/projects/residencia-ic-lagoa-santa/infrastructure.jpg";
-import project1Foundation from "@/assets/projects/residencia-ic-lagoa-santa/foundation.jpg";
-import project1Equipment from "@/assets/projects/residencia-ic-lagoa-santa/equipment.jpg";
-import project1Cad from "@/assets/projects/residencia-ic-lagoa-santa/cad.jpg";
-import project1Finishing from "@/assets/projects/residencia-ic-lagoa-santa/finishing.jpg";
-
-// Project 2 - Villa Sustentável
-import project2Main from "@/assets/projects/villa-sustentavel/main.jpg";
-import project2Infrastructure1 from "@/assets/projects/villa-sustentavel/infrastructure-1.jpg";
-import project2Infrastructure2 from "@/assets/projects/villa-sustentavel/infrastructure-2.jpg";
-import project2Foundation from "@/assets/projects/villa-sustentavel/foundation.jpg";
-import project2Equipment from "@/assets/projects/villa-sustentavel/equipment.jpg";
-import project2Cad from "@/assets/projects/villa-sustentavel/cad.jpg";
-import project2Finishing from "@/assets/projects/villa-sustentavel/finishing.jpg";
-
-// Project 3 - Cobertura Urbana
-import project3Main from "@/assets/projects/cobertura-urbana/main.jpg";
-import project3Infrastructure from "@/assets/projects/cobertura-urbana/infrastructure.jpg";
-import project3Foundation from "@/assets/projects/cobertura-urbana/foundation.jpg";
-import project3Equipment from "@/assets/projects/cobertura-urbana/equipment.jpg";
-import project3Cad from "@/assets/projects/cobertura-urbana/cad.jpg";
-import project3Finishing from "@/assets/projects/cobertura-urbana/finishing.jpg";
-
+// ============================================
+// CONFIGURAÇÃO DOS PROJETOS
+// ============================================
 const projectsData: Record<string, {
   title: string;
   description: string;
-  image: string;
-  gallery: {
-    infrastructure: string[];
-    foundation: string[];
-    equipment: string[];
-    cad: string[];
-    finishing: string[];
-  };
+  location?: string;
+  year?: string;
+  area?: string;
 }> = {
   "residencia-ic-lagoa-santa": {
-    title: "Residencia IC Lagoa Santa",
+    title: "Residência IC Lagoa Santa",
     description: "Sistema de climatização integrada e automação residencial",
-    image: project1Main,
-    gallery: {
-      infrastructure: [project1Infrastructure],
-      foundation: [project1Foundation],
-      equipment: [project1Equipment],
-      cad: [project1Cad],
-      finishing: [project1Finishing],
-    },
+    location: "Lagoa Santa, MG",
+    year: "2024",
+    area: "350m²",
   },
   "villa-sustentavel": {
     title: "Villa Sustentável",
     description: "Estrutura inteligente com captação solar e reuso de água",
-    image: project2Main,
-    gallery: {
-      infrastructure: [project2Infrastructure1, project2Infrastructure2],
-      foundation: [project2Foundation],
-      equipment: [project2Equipment],
-      cad: [project2Cad],
-      finishing: [project2Finishing],
-    },
+    location: "Belo Horizonte, MG",
+    year: "2023",
+    area: "420m²",
   },
   "cobertura-urbana": {
     title: "Cobertura Urbana",
     description: "Engenharia estrutural para terraço suspenso premium",
-    image: project3Main,
-    gallery: {
-      infrastructure: [project3Infrastructure],
-      foundation: [project3Foundation],
-      equipment: [project3Equipment],
-      cad: [project3Cad],
-      finishing: [project3Finishing],
-    },
+    location: "Nova Lima, MG",
+    year: "2024",
+    area: "280m²",
   },
 };
 
-const galleryCategories = [
-  { id: "infrastructure", label: "Infraestrutura" },
-  { id: "foundation", label: "Fundação" },
-  { id: "equipment", label: "Equipamentos" },
-  { id: "cad", label: "CAD" },
-  { id: "finishing", label: "Acabamento" },
-];
+// ============================================
+// FUNÇÃO PARA IMPORTAR IMAGENS AUTOMATICAMENTE
+// ============================================
+// Esta função pega TODAS as imagens da pasta do projeto
+const importProjectImages = (projectSlug: string) => {
+  // import.meta.glob busca todos os arquivos que correspondem ao padrão
+  const images = import.meta.glob('/assets/projects/**/*.{jpg,jpeg,png,webp}', { eager: true });
+  
+  const projectImages: string[] = [];
+  
+  Object.entries(images).forEach(([path, module]: [string, any]) => {
+    // Filtra apenas as imagens da pasta do projeto específico
+    if (path.includes(`/projects/${projectSlug}/`)) {
+      projectImages.push(module.default);
+    }
+  });
+  
+  return projectImages;
+};
 
-const ProjectDetail = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const [selectedCategory, setSelectedCategory] = useState("infrastructure");
+// ============================================
+// COMPONENTE PRINCIPAL
+// ============================================
+const ProjectGalleryAuto = () => {
+  const [currentProject, setCurrentProject] = useState<string>("residencia-ic-lagoa-santa");
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  const project = slug ? projectsData[slug] : null;
-
-  if (!project) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="font-playfair text-3xl font-bold mb-4 text-foreground">
-            Projeto não encontrado
-          </h1>
-          <Link to="/projetos">
-            <Button variant="outline">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Voltar aos Projetos
-            </Button>
-          </Link>
-        </div>
-      </div>
-    );
-  }
-
-  const currentImages = project.gallery[selectedCategory as keyof typeof project.gallery] || [];
+  const project = projectsData[currentProject];
+  // Carrega automaticamente todas as imagens da pasta
+  const images = importProjectImages(currentProject);
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-6 py-12">
-        <Link to="/projetos">
-          <Button variant="ghost" className="mb-8">
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Voltar aos Projetos
-          </Button>
-        </Link>
-
-        <div className="mb-12">
-          <div className="relative h-[300px] md:h-[400px] rounded-xl overflow-hidden mb-8">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-            <div className="absolute bottom-0 left-0 p-8">
-              <h1 className="font-playfair text-3xl md:text-5xl font-bold text-foreground mb-2">
-                {project.title}
-              </h1>
-              <p className="font-inter text-lg text-muted-foreground">
-                {project.description}
-              </p>
-            </div>
+    <div className="min-h-screen bg-slate-50">
+      <div className="max-w-7xl mx-auto px-6 py-12">
+        
+        {/* Seletor de Projetos */}
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-slate-900 mb-4">Nossos Projetos</h1>
+          <div className="flex flex-wrap gap-2">
+            {Object.entries(projectsData).map(([slug, proj]) => (
+              <button
+                key={slug}
+                onClick={() => setCurrentProject(slug)}
+                className={`px-4 py-2 rounded-lg font-medium transition-all ${
+                  currentProject === slug
+                    ? 'bg-slate-900 text-white shadow-md'
+                    : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
+                }`}
+              >
+                {proj.title}
+              </button>
+            ))}
           </div>
         </div>
 
-        <div className="mb-8">
-          <h2 className="font-playfair text-2xl md:text-3xl font-semibold mb-6 text-foreground">
-            Galeria do Projeto
-          </h2>
-
-          {/* Mobile: Select dropdown */}
-          <div className="md:hidden mb-6">
-            <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-              <SelectTrigger className="w-full">
-                <SelectValue placeholder="Selecione uma categoria" />
-              </SelectTrigger>
-              <SelectContent>
-                {galleryCategories.map((category) => (
-                  <SelectItem key={category.id} value={category.id}>
-                    {category.label}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
-
-          {/* Desktop: Tabs */}
-          <div className="hidden md:block">
-            <Tabs value={selectedCategory} onValueChange={setSelectedCategory}>
-              <TabsList className="mb-6">
-                {galleryCategories.map((category) => (
-                  <TabsTrigger key={category.id} value={category.id}>
-                    {category.label}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-            </Tabs>
-          </div>
-
-          {/* Gallery Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {currentImages.map((image, index) => (
-              <div
-                key={index}
-                className="aspect-[4/3] rounded-lg overflow-hidden border border-border"
-              >
-                <img
-                  src={image}
-                  alt={`${project.title} - ${selectedCategory} ${index + 1}`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
+        {/* Hero Section do Projeto */}
+        <div className="mb-12">
+          {images[0] && (
+            <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl mb-8">
+              <img
+                src={images[0]}
+                alt={project.title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 p-8 text-white">
+                <h2 className="text-4xl font-bold mb-2">
+                  {project.title}
+                </h2>
+                <p className="text-lg text-white/90 mb-4">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-4 text-sm">
+                  {project.location && <span>📍 {project.location}</span>}
+                  {project.year && <span>📅 {project.year}</span>}
+                  {project.area && <span>📐 {project.area}</span>}
+                </div>
               </div>
-            ))}
+            </div>
+          )}
+        </div>
+
+        {/* Galeria */}
+        <div>
+          <div className="flex items-center justify-between mb-6">
+            <h3 className="text-2xl font-bold text-slate-900">
+              Galeria
+            </h3>
+            <span className="text-sm text-slate-600 bg-white px-3 py-1 rounded-full border">
+              {images.length} {images.length === 1 ? 'foto' : 'fotos'}
+            </span>
           </div>
 
-          {currentImages.length === 0 && (
-            <p className="text-center text-muted-foreground py-12">
-              Nenhuma imagem disponível nesta categoria.
-            </p>
+          {images.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {images.map((image, index) => (
+                <div
+                  key={index}
+                  className="group relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer bg-slate-200 shadow-md hover:shadow-xl transition-all"
+                  onClick={() => setSelectedImage(image)}
+                >
+                  <img
+                    src={image}
+                    alt={`${project.title} - Foto ${index + 1}`}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
+                    <ZoomIn className="w-10 h-10 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-16 bg-white rounded-xl border-2 border-dashed border-slate-300">
+              <p className="text-slate-600 text-lg mb-2">
+                📸 Nenhuma imagem disponível
+              </p>
+              <p className="text-sm text-slate-500">
+                Adicione fotos em: <code className="bg-slate-100 px-2 py-1 rounded text-xs">
+                  /assets/projects/{currentProject}/
+                </code>
+              </p>
+            </div>
           )}
         </div>
       </div>
+
+      {/* Lightbox (Modal para imagem ampliada) */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button
+            onClick={() => setSelectedImage(null)}
+            className="absolute top-4 right-4 text-white hover:text-slate-300 transition-colors"
+          >
+            <X className="w-10 h-10" />
+          </button>
+          <img
+            src={selectedImage}
+            alt="Imagem ampliada"
+            className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
   );
 };
 
-export default ProjectDetail;
+export default ProjectGalleryAuto;
