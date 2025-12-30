@@ -15,10 +15,10 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-6 py-32 text-center text-white">
         
         <Link to="/projetos">
-          <button className="bg-primary hover:bg-primary/30 p-4 rounded-lg transition cursor-pointer shadow-md hover:shadow-lg" style={{
+          <button style={{
           width: "200px",
           margin: "0 auto"
-        }}>
+        }} className="bg-primary hover:bg-primary/30 p-4 rounded-lg transition cursor-pointer shadow-md hover:shadow-lg text-right">
             <img src={logoGehaus} alt="Logo" className="w-full h-full object-contain opacity-60 hover:opacity-100 transition" />
           </button>
           
