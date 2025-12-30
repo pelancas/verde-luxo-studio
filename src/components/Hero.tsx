@@ -21,8 +21,8 @@ const Hero = () => {
         
         <Link to="/projetos">
           <button
-            className="bg-green-600 hover:bg-green-700 p-4 rounded-lg transition cursor-pointer shadow-md hover:shadow-lg"
-            style={{ width: "500px", margin: "0 auto" }}
+            className="bg-primary hover:bg-primary/30 p-4 rounded-lg transition cursor-pointer shadow-md hover:shadow-lg"
+            style={{ width: "200px", margin: "0 auto" }}
           >
             <img
               src={logoGehaus}
