@@ -40,7 +40,7 @@ const projectsData: Record<string, {
 // Esta função pega TODAS as imagens da pasta do projeto
 const importProjectImages = (projectSlug: string) => {
   // import.meta.glob busca todos os arquivos que correspondem ao padrão
-  const images = import.meta.glob('/assets/projects/**/*.{jpg,jpeg,png,webp}', { eager: true });
+  const images = import.meta.glob('@/assets/projects/**/*.{jpg,jpeg,png,webp}', { eager: true });
   
   const projectImages: string[] = [];
   
