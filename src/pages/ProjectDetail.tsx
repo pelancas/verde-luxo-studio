@@ -9,27 +9,32 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project1Infrastructure from "@/assets/project1-infrastructure.jpg";
-import project1Foundation from "@/assets/project1-foundation.jpg";
-import project1Equipment from "@/assets/project1-equipment.jpg";
-import project1Cad from "@/assets/project1-cad.jpg";
-import project1Finishing from "@/assets/project1-finishing.jpg";
-import project2Infrastructure from "@/assets/project2-infrastructure.jpg";
-import project2Infrastructure2 from "@/assets/project2-infrastructure-2.jpg";
-import project2Foundation from "@/assets/project2-foundation.jpg";
-import project2Equipment from "@/assets/project2-equipment.jpg";
-import project2Cad from "@/assets/project2-cad.jpg";
-import project2Finishing from "@/assets/project2-finishing.jpg";
-import project3Infrastructure from "@/assets/project3-infrastructure.jpg";
-import project3Foundation from "@/assets/project3-foundation.jpg";
-import project3Equipment from "@/assets/project3-equipment.jpg";
-import project3Cad from "@/assets/project3-cad.jpg";
-import project3Finishing from "@/assets/project3-finishing.jpg";
+// Project 1 - Residencia IC Lagoa Santa
+import project1Main from "@/assets/projects/residencia-ic-lagoa-santa/main.jpg";
+import project1Infrastructure from "@/assets/projects/residencia-ic-lagoa-santa/infrastructure.jpg";
+import project1Foundation from "@/assets/projects/residencia-ic-lagoa-santa/foundation.jpg";
+import project1Equipment from "@/assets/projects/residencia-ic-lagoa-santa/equipment.jpg";
+import project1Cad from "@/assets/projects/residencia-ic-lagoa-santa/cad.jpg";
+import project1Finishing from "@/assets/projects/residencia-ic-lagoa-santa/finishing.jpg";
+
+// Project 2 - Villa Sustentável
+import project2Main from "@/assets/projects/villa-sustentavel/main.jpg";
+import project2Infrastructure1 from "@/assets/projects/villa-sustentavel/infrastructure-1.jpg";
+import project2Infrastructure2 from "@/assets/projects/villa-sustentavel/infrastructure-2.jpg";
+import project2Foundation from "@/assets/projects/villa-sustentavel/foundation.jpg";
+import project2Equipment from "@/assets/projects/villa-sustentavel/equipment.jpg";
+import project2Cad from "@/assets/projects/villa-sustentavel/cad.jpg";
+import project2Finishing from "@/assets/projects/villa-sustentavel/finishing.jpg";
+
+// Project 3 - Cobertura Urbana
+import project3Main from "@/assets/projects/cobertura-urbana/main.jpg";
+import project3Infrastructure from "@/assets/projects/cobertura-urbana/infrastructure.jpg";
+import project3Foundation from "@/assets/projects/cobertura-urbana/foundation.jpg";
+import project3Equipment from "@/assets/projects/cobertura-urbana/equipment.jpg";
+import project3Cad from "@/assets/projects/cobertura-urbana/cad.jpg";
+import project3Finishing from "@/assets/projects/cobertura-urbana/finishing.jpg";
 
 const projectsData: Record<string, {
   title: string;
@@ -46,7 +51,7 @@ const projectsData: Record<string, {
   "residencia-ic-lagoa-santa": {
     title: "Residencia IC Lagoa Santa",
     description: "Sistema de climatização integrada e automação residencial",
-    image: project1,
+    image: project1Main,
     gallery: {
       infrastructure: [project1Infrastructure],
       foundation: [project1Foundation],
@@ -58,9 +63,9 @@ const projectsData: Record<string, {
   "villa-sustentavel": {
     title: "Villa Sustentável",
     description: "Estrutura inteligente com captação solar e reuso de água",
-    image: project2,
+    image: project2Main,
     gallery: {
-      infrastructure: [project2Infrastructure, project2Infrastructure2],
+      infrastructure: [project2Infrastructure1, project2Infrastructure2],
       foundation: [project2Foundation],
       equipment: [project2Equipment],
       cad: [project2Cad],
@@ -70,7 +75,7 @@ const projectsData: Record<string, {
   "cobertura-urbana": {
     title: "Cobertura Urbana",
     description: "Engenharia estrutural para terraço suspenso premium",
-    image: project3,
+    image: project3Main,
     gallery: {
       infrastructure: [project3Infrastructure],
       foundation: [project3Foundation],
