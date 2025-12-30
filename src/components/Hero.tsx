@@ -21,6 +21,7 @@ const Hero = () => {
         }}>
             <img src={logoGehaus} alt="Logo" className="w-full h-full object-contain opacity-60 hover:opacity-100 transition" />
           </button>
+          Engenharia
         </Link>
         <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6 tracking-tight">
           Sofisticação Construtiva   
