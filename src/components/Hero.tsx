@@ -1,28 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-architecture.jpg";
-import logoGehaus from "@/assets/gehauslogobrancargb.png";
+
 const Hero = () => {
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 z-0" style={{
-      backgroundImage: `url(${heroImage})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center'
-    }}>
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32">
+      <div 
+        className="absolute inset-0 z-0" 
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
         <div className="absolute inset-0 bg-foreground/40" />
       </div>
       
       <div className="relative z-10 container mx-auto px-6 py-32 text-center text-white">
-        
-        <Link to="/projetos">
-          <button style={{
-          width: "200px",
-          margin: "0 auto"
-        }} className="bg-primary hover:bg-primary/30 p-4 rounded-lg transition cursor-pointer shadow-md hover:shadow-lg text-right">
-            <img src={logoGehaus} alt="Logo" className="w-full h-full object-contain opacity-60 hover:opacity-100 transition" />
-          </button>
-          
-        </Link>
         <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6 tracking-tight">
           Sofisticação Construtiva   
         </h1>
@@ -35,6 +29,8 @@ const Hero = () => {
           </Button>
         </Link>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
