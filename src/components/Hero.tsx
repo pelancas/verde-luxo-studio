@@ -18,7 +18,7 @@ const Hero = () => {
         <p className="font-inter text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-light">
           Engenharia para imóveis de alto padrão. Excelência em estruturas, sistemas e tecnologia de ponta.
         </p>
-        <Link to="/projetos">
+        <Link to="/projeto/residencia-ic-lagoa-santa">
           <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter font-medium text-lg px-8 py-6">
             Conheça Nossos Projetos
           </Button>
