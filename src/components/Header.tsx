@@ -40,7 +40,7 @@ const Header = () => {
             </li>
             <li>
               <a 
-                href="/#about" 
+                href="/#EngineerProfile" 
                 className="text-primary-foreground hover:text-primary-foreground/80 font-inter text-sm uppercase tracking-wider transition-colors"
               >
                 Sobre
@@ -48,7 +48,7 @@ const Header = () => {
             </li>
             <li>
               <a 
-                href="/#services" 
+                href="/#Services" 
                 className="text-primary-foreground hover:text-primary-foreground/80 font-inter text-sm uppercase tracking-wider transition-colors"
               >
                 Serviços
@@ -56,7 +56,7 @@ const Header = () => {
             </li>
             <li>
               <a 
-                href="/#contact" 
+                href="/#Contact" 
                 className="text-primary-foreground hover:text-primary-foreground/80 font-inter text-sm uppercase tracking-wider transition-colors"
               >
                 Contato
