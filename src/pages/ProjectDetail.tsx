@@ -81,7 +81,7 @@ const ProjectGalleryAuto = () => {
               <button
                 key={slug}
                 onClick={() => setCurrentProject(slug)}
-                className={`px-4 py-2 rounded-lg font-playfair transition-all ${
+                className={`px-4 py-2 rounded-lg font-bold transition-all ${
                   currentProject === slug
                     ? 'bg-primary text-white shadow-md'
                     : 'bg-accent text-slate-100 hover:bg-primary/90 border border-slate-200'
