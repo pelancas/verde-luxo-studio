@@ -13,7 +13,7 @@ const services = [
   },
   {
     icon: PenTool,
-    title: "Planejamento estratégico ",
+    title: "Planejamento Estratégico ",
     description: "Estratégias inteligentes para menor custo e máxima eficiência.",
   },
   {
