@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import Contact from "@/components/Contact";
@@ -30,6 +31,7 @@ const projects = [
 const Projects = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Header />
       <div className="container mx-auto px-6 py-24">
         <div className="text-center mb-16">
           <h1 className="font-playfair text-4xl md:text-5xl font-bold mb-4 text-foreground">

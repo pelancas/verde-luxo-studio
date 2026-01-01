@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import { ArrowLeft, ZoomIn, X } from "lucide-react";
 import { useState } from "react";
 import Contact from "@/components/Contact";
@@ -69,8 +70,8 @@ const ProjectGalleryAuto = () => {
 
   return (
     <div className="min-h-screen bg-slate-50">
+      <Header />
       <div className="max-w-7xl mx-auto px-6 py-12">
-        
         {/* Seletor de Projetos */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-slate-900 mb-4">Nossos Projetos</h1>
