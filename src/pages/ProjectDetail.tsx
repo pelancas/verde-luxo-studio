@@ -75,6 +75,7 @@ const ProjectGalleryAuto = () => {
         {/* Seletor de Projetos */}
         <div className="mb-8">
           <h1 className="text-3xl font-playfair text-slate-900 mb-4"> P </h1>
+          <h1 className="text-3xl font-playfair text-slate-900 mb-4"> Destaques do nosso portfólio </h1>
           <div className="flex flex-wrap gap-2">
             {Object.entries(projectsData).map(([slug, proj]) => (
               <button
