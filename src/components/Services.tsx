@@ -8,13 +8,13 @@ const services = [
   },
   {
     icon: Building2,
-    title: "Sistemas Prediais",
+    title: "Infraestrutura Técnica",
     description: "Instalações elétricas, hidráulicas e HVAC de última geração.",
   },
   {
     icon: PenTool,
-    title: "Automação Residencial",
-    description: "Tecnologia inteligente para máximo conforto e eficiência.",
+    title: "Planejamento estratégico ",
+    description: "Estratégias inteligentes para menor custo e máxima eficiência.",
   },
   {
     icon: Trees,
