@@ -31,7 +31,7 @@ const Header = () => {
             </li>
             <li>
               <NavLink 
-                to="/projetos" 
+                to="/projeto/residencia-ic-lagoa-santa" 
                 className="text-primary-foreground hover:text-primary-foreground/80 font-inter text-sm uppercase tracking-wider transition-colors"
                 activeClassName="font-semibold"
               >
