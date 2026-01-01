@@ -74,7 +74,7 @@ const ProjectGalleryAuto = () => {
       <div className="max-w-7xl mx-auto px-6 py-12">
         {/* Seletor de Projetos */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-slate-900 mb-4">Nossos Projetos</h1>
+          <h1 className="text-3xl font-bold text-slate-900 mb-4"></h1>
           <div className="flex flex-wrap gap-2">
             {Object.entries(projectsData).map(([slug, proj]) => (
               <button
@@ -83,7 +83,7 @@ const ProjectGalleryAuto = () => {
                 className={`px-4 py-2 rounded-lg font-medium transition-all ${
                   currentProject === slug
                     ? 'bg-primary text-white shadow-md'
-                    : 'bg-white text-slate-100 hover:bg-primary/90 border border-slate-200'
+                    : 'bg-accent text-slate-100 hover:bg-primary/90 border border-slate-200'
                 }`}
               >
                 {proj.title}
