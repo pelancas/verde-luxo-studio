@@ -74,7 +74,7 @@ const ProjectGalleryAuto = () => {
       <div className="max-w-7xl mx-auto px-6 py-12">
         {/* Seletor de Projetos */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-slate-900 mb-4"> P </h1>
+          <h1 className="text-3xl font-playfair text-slate-900 mb-4"> P </h1>
           <div className="flex flex-wrap gap-2">
             {Object.entries(projectsData).map(([slug, proj]) => (
               <button
@@ -103,7 +103,7 @@ const ProjectGalleryAuto = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 p-8 text-white">
-                <h2 className="text-4xl font-bold mb-2">
+                <h2 className="text-4xl font-playfair mb-2">
                   {project.title}
                 </h2>
                 <p className="text-lg text-white/90 mb-4">
