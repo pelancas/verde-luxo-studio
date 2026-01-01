@@ -4,6 +4,7 @@ import Contact from "@/components/Contact";
 import project1 from "@/assets/projects/residencia-ic-lagoa-santa/main.jpg";
 import project2 from "@/assets/projects/villa-sustentavel/main.jpg";
 import project3 from "@/assets/projects/cobertura-urbana/main.jpg";
+import Footer from "@/components/Footer";
 
 const projects = [
   {
@@ -66,6 +67,7 @@ const Projects = () => {
         </div>
       </div>
       <Contact />
+      <Footer />
     </div>
   );
 };
