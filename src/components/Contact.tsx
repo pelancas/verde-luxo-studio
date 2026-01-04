@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Instagram, MapPin } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -15,12 +15,17 @@ const Contact = () => {
           </p>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="flex flex-col items-center">
+            <a 
+              href="https://www.instagram.com/gehaus_eng/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex flex-col items-center hover:opacity-80 transition-opacity"
+            >
               <div className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center mb-4">
-                <Phone className="w-6 h-6" />
+                <Instagram className="w-6 h-6" />
               </div>
-              <p className="font-inter font-medium">+55 (31) 99949-9060</p>
-            </div>
+              <p className="font-inter font-medium">@gehaus_eng</p>
+            </a>
 
             <div className="flex flex-col items-center">
               <div className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center mb-4">
