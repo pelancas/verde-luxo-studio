@@ -14,7 +14,7 @@ import project3 from "@/assets/projects/cobertura-urbana/main.jpg";
 const projects = [
   {
     title: "Residencia Alto Mirante",
-    description: "Erguida no alto, esta residência exclusiva se integra à paisagem das montanhas de Minas Gerais como uma extensão natural do horizonte.",
+    description: "Esta residência exclusiva se integra à paisagem das montanhas de Minas Gerais como uma extensão natural do horizonte.",
     image: project1,
   },
   {

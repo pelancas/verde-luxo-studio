@@ -15,11 +15,11 @@ const projectsData: Record<string, {
   area?: string;
 }> = {
   "residencia-ic-lagoa-santa": {
-    title: "Residência IC Lagoa Santa",
-    description: "Sistema de climatização integrada e automação residencial",
-    location: "Lagoa Santa, MG",
-    year: "2024",
-    area: "350m²",
+    title: "Residência Alto Mirante",
+    description: "Esta residência exclusiva se integra à paisagem das montanhas de Minas Gerais como uma extensão natural do horizonte.",
+    location: "Nova Lima, MG",
+    year: "2023",
+    area: "1000m²",
   },
   "villa-sustentavel": {
     title: "Villa Sustentável",
