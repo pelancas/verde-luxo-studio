@@ -18,11 +18,11 @@ const projectsData: Record<string, {
     title: "Residência Alto Mirante",
     description: "Esta residência exclusiva se integra à paisagem das montanhas de Minas Gerais como uma extensão natural do horizonte.",
     location: "Nova Lima, MG",
-    year: "2023",
+    year: "2024",
     area: "1000m²",
   },
   "villa-sustentavel": {
-    title: "Villa Sustentável",
+    title: "Villa J. Pedra",
     description: "Estrutura inteligente com captação solar e reuso de água",
     location: "Belo Horizonte, MG",
     year: "2023",
@@ -32,8 +32,8 @@ const projectsData: Record<string, {
     title: "Casa I. Cobalto",
     description: "A casa foi pensada para valorizar a luz, o silêncio e a contemplação, transformando cada ambiente em um mirante particular.",
     location: "Nova Lima, MG",
-    year: "2024",
-    area: "280m²",
+    year: "2022",
+    area: "600m²",
   },
 };
 

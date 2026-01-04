@@ -18,7 +18,7 @@ const projects = [
     image: project1,
   },
   {
-    title: "Villa Sustentável",
+    title: "Villa J. Pedra",
     description: "Estrutura inteligente com captação solar e reuso de água",
     image: project2,
   },
