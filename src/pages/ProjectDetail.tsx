@@ -15,7 +15,7 @@ const projectsData: Record<string, {
   area?: string;
 }> = {
   "residencia-ic-lagoa-santa": {
-    title: "Residência IC Lagoa Santa",
+    title: "Residência Caminho de Pedra",
     description: "Sistema de climatização integrada e automação residencial",
     location: "Lagoa Santa, MG",
     year: "2024",
