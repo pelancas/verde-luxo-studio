@@ -13,8 +13,8 @@ import project3 from "@/assets/projects/cobertura-urbana/main.jpg";
 
 const projects = [
   {
-    title: "Residencia IC Lagoa Santa",
-    description: "Sistema de climatização integrada e automação residencial",
+    title: "Residencia Alto Mirante",
+    description: "Erguida no alto, esta residência exclusiva se integra à paisagem das montanhas de Minas Gerais como uma extensão natural do horizonte.",
     image: project1,
   },
   {
@@ -53,7 +53,7 @@ const Portfolio = () => {
           <CarouselContent>
             {projects.map((project, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
-                <Link to="/projetos">
+                <Link to="/projeto/residencia-ic-lagoa-santa">
                   <Card 
                     className="overflow-hidden border-border bg-card h-full cursor-pointer hover:shadow-lg transition-shadow"
                   >
