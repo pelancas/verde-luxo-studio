@@ -23,8 +23,8 @@ const projects = [
     image: project2,
   },
   {
-    title: "Cobertura Urbana",
-    description: "Engenharia estrutural para terraço suspenso premium",
+    title: "Casa I. Cobalto",
+    description: "A casa foi pensada para valorizar a luz, o silêncio e a contemplação, transformando cada ambiente em um mirante particular.",
     image: project3,
   },
 ];

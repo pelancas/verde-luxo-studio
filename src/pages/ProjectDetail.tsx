@@ -29,8 +29,8 @@ const projectsData: Record<string, {
     area: "420m²",
   },
   "cobertura-urbana": {
-    title: "Cobertura Urbana",
-    description: "Engenharia estrutural para terraço suspenso premium",
+    title: "Casa I. Cobalto",
+    description: "A casa foi pensada para valorizar a luz, o silêncio e a contemplação, transformando cada ambiente em um mirante particular.",
     location: "Nova Lima, MG",
     year: "2024",
     area: "280m²",
