@@ -22,7 +22,7 @@ const projectsData: Record<string, {
     area: "1000m²",
   },
   "villa-sustentavel": {
-    title: "Villa J. Pedra",
+    title: "Villa Jardim de Pedra",
     description: "Estrutura inteligente com captação solar e reuso de água",
     location: "Belo Horizonte, MG",
     year: "2023",
