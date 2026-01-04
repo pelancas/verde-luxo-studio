@@ -7,7 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import project1 from "@/assets/projects/residencia-ic-lagoa-santa/20240129_124518.jpg";
+import project1 from "@/assets/projects/residencia-ic-lagoa-santa/main.jpg";
 import project2 from "@/assets/projects/villa-sustentavel/main.jpg";
 import project3 from "@/assets/projects/cobertura-urbana/main.jpg";
 
