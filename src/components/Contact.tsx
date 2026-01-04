@@ -42,13 +42,15 @@ const Contact = () => {
             </div>
           </div>
 
-          <Button 
-            size="lg"
-            variant="secondary"
-            className="font-inter font-medium text-lg px-8 py-6"
-          >
-            Agendar Consulta
-          </Button>
+          <a href="mailto:evandro@gehaus.com.br?subject=Agendar Consulta">
+            <Button 
+              size="lg"
+              variant="secondary"
+              className="font-inter font-medium text-lg px-8 py-6"
+            >
+              Agendar Consulta
+            </Button>
+          </a>
         </div>
       </div>
     </section>
