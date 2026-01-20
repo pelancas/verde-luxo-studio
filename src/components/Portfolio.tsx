@@ -16,16 +16,19 @@ const projects = [
     title: "Residencia Alto Mirante",
     description: "Esta residência exclusiva se integra à paisagem das montanhas de Minas Gerais como uma extensão natural do horizonte.",
     image: project1,
+    slug: "residencia-ic-lagoa-santa",
   },
   {
     title: "Villa Jardim de Pedra",
     description: "Estrutura inteligente com captação solar e reuso de água",
     image: project2,
+    slug: "villa-sustentavel",
   },
   {
     title: "Casa I. Cobalto",
     description: "A casa foi pensada para valorizar a luz, o silêncio e a contemplação, transformando cada ambiente em um mirante particular.",
     image: project3,
+    slug: "cobertura-urbana",
   },
 ];
 
@@ -53,7 +56,7 @@ const Portfolio = () => {
           <CarouselContent>
             {projects.map((project, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
-                <Link to="/projeto/residencia-ic-lagoa-santa">
+                <Link to={`/projeto/${project.slug}`}>
                   <Card 
                     className="overflow-hidden border-border bg-card h-full cursor-pointer hover:shadow-lg transition-shadow"
                   >
