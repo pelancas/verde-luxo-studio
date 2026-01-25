@@ -15,21 +15,21 @@ const projectsData: Record<string, {
   area?: string;
 }> = {
   "residencia-ic-lagoa-santa": {
-    title: "Residência Alto Mirante",
+    title: "T & A",
     description: "Esta residência exclusiva se integra à paisagem das montanhas de Minas Gerais como uma extensão natural do horizonte.",
     location: "Nova Lima, MG",
     year: "2024",
     area: "1000m²",
   },
   "villa-sustentavel": {
-    title: "Villa Jardim de Pedra",
+    title: "R & J",
     description: "Estrutura inteligente com captação solar e reuso de água",
     location: "Belo Horizonte, MG",
     year: "2023",
     area: "420m²",
   },
   "cobertura-urbana": {
-    title: "Casa I. Cobalto",
+    title: "I & C",
     description: "A casa foi pensada para valorizar a luz, o silêncio e a contemplação, transformando cada ambiente em um mirante particular.",
     location: "Nova Lima, MG",
     year: "2022",

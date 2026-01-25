@@ -13,19 +13,19 @@ import project3 from "@/assets/projects/cobertura-urbana/main.jpg";
 
 const projects = [
   {
-    title: "Residencia Alto Mirante",
+    title: "Residencia T & A",
     description: "Esta residência exclusiva se integra à paisagem das montanhas de Minas Gerais como uma extensão natural do horizonte.",
     image: project1,
     slug: "residencia-ic-lagoa-santa",
   },
   {
-    title: "Villa Jardim de Pedra",
+    title: "Villa R & J",
     description: "Estrutura inteligente com captação solar e reuso de água",
     image: project2,
     slug: "villa-sustentavel",
   },
   {
-    title: "Casa I. Cobalto",
+    title: "Casa I & C",
     description: "A casa foi pensada para valorizar a luz, o silêncio e a contemplação, transformando cada ambiente em um mirante particular.",
     image: project3,
     slug: "cobertura-urbana",
