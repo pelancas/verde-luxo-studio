@@ -51,14 +51,14 @@ const Portfolio = () => {
           <p className="font-inter text-lg text-muted-foreground max-w-2xl mx-auto">
             Cada projeto é desenvolvido com tecnologia de ponta e precisão técnica, 
             garantindo soluções de engenharia que superam expectativas.
-            
+
           </p>
           <p> </p>
           <a href="/projeto/residencia-ic-lagoa-santa">
             <Button 
               size="lg"
               variant="secondary"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter font-medium text-lg px-8 py-6"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter font-medium text-lg px-8 py-15"
             >
               Projetos
             </Button>
