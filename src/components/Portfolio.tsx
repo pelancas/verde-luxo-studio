@@ -10,6 +10,7 @@ import {
 import project1 from "@/assets/projects/residencia-ic-lagoa-santa/main.jpg";
 import project2 from "@/assets/projects/villa-sustentavel/main.jpg";
 import project3 from "@/assets/projects/cobertura-urbana/main.jpg";
+import project4 from "@/assets/projects/residencia-l-m/main.jpg";
 
 const projects = [
   {
@@ -29,6 +30,12 @@ const projects = [
     description: "A casa foi pensada para valorizar a luz, o silêncio e a contemplação, transformando cada ambiente em um mirante particular.",
     image: project3,
     slug: "cobertura-urbana",
+  },
+  {
+    title: "Casa LM",
+    description: "Em construção.",
+    image: project4,
+    slug: "residencia-l-m",
   },
 ];
 

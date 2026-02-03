@@ -35,6 +35,13 @@ const projectsData: Record<string, {
     year: "2021",
     area: "955m²",
   },
+    "residencia-l-m": {
+    title: "Residência LM",
+    description: "Em construção.",
+    location: "Nova Lima, MG",
+    year: "2025",
+    area: "3.200m²",
+  },
 };
 
 // ============================================
@@ -63,7 +70,6 @@ const importProjectImages = (projectSlug: string) => {
 const ProjectGalleryAuto = () => {
   const [currentProject, setCurrentProject] = useState<string>("residencia-ic-lagoa-santa");
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
   const project = projectsData[currentProject];
   // Carrega automaticamente todas as imagens da pasta
   const images = importProjectImages(currentProject);

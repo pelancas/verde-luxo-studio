@@ -71,3 +71,34 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+### Adicionar um projeto
+assets
+|_ projects
+   |_ criar uma pasta para armazenar as fotos (nome ####-#####-####)
+      |_ (	equipment.jpg
+		finishing.jpg
+		foundation.jpg
+		infrastructure.jpg
+		main.jpg )
+
+components
+|_ Portfolio.tsx
+   |_ import project'#' from "@/assets/projects/nome-da-pasta/main.jpg";
+   |_ const projects = [
+        {
+          title: "##############",
+          description: "###############",
+          image: project#,
+          slug: "########-##########",
+        },
+
+pages
+|_ ProjectDetail.tsx
+   |_"nome-da-pasta": {
+	    title: "#######",
+	    description: "##################",
+	    location: "#####, ##",
+	    year: "####",
+	    area: "### m²",
+	  },
