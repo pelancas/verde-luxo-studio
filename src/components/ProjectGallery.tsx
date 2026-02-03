@@ -9,9 +9,7 @@ interface ProjectGalleryProps {
   projectTitle: string;
   galleryImages: {
     infrastructure: string[];
-    foundation: string[];
-    equipment: string[];
-    finishing: string[];
+
   };
 }
 
@@ -23,21 +21,6 @@ const ProjectGallery = ({ isOpen, onClose, projectTitle, galleryImages }: Projec
       id: "infrastructure",
       label: "Infraestrutura",
       images: galleryImages.infrastructure,
-    },
-    {
-      id: "foundation",
-      label: "Terraplanagem e Fundação",
-      images: galleryImages.foundation,
-    },
-    {
-      id: "equipment",
-      label: "Máquinas e Equipamentos",
-      images: galleryImages.equipment,
-    },
-    {
-      id: "finishing",
-      label: "Acabamento",
-      images: galleryImages.finishing,
     },
   ];
 
