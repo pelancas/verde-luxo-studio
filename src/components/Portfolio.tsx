@@ -52,6 +52,15 @@ const Portfolio = () => {
             Cada projeto é desenvolvido com tecnologia de ponta e precisão técnica, 
             garantindo soluções de engenharia que superam expectativas.
           </p>
+          <a href="/projeto/residencia-ic-lagoa-santa">
+            <Button 
+              size="lg"
+              variant="secondary"
+              className="font-inter font-medium text-lg px-8 py-6"
+            >
+              Projetos
+            </Button>
+          </a>
         </div>
 
         <Carousel
@@ -89,15 +98,7 @@ const Portfolio = () => {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
-          <a href="/projeto/residencia-ic-lagoa-santa">
-            <Button 
-              size="lg"
-              variant="secondary"
-              className="font-inter font-medium text-lg px-8 py-6"
-            >
-              Projetos
-            </Button>
-          </a>
+
 
       </div>
     </section>
