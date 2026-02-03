@@ -42,6 +42,13 @@ const projectsData: Record<string, {
     year: "2025",
     area: "3.200m²",
   },
+    "villa-m-e-r": {
+    title: "Villa M & R",
+    description: "Em construção.",
+    location: "Lagoa Santa, MG",
+    year: "2024",
+    area: "1.500m²",
+  },
 };
 
 // ============================================
