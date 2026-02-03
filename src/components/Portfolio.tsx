@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -63,7 +64,6 @@ const Portfolio = () => {
           <CarouselContent>
             {projects.map((project, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
-                <Link to={`/projeto/${project.slug}`}>
                   <Card 
                     className="overflow-hidden border-border bg-card h-full cursor-pointer hover:shadow-lg transition-shadow"
                   >
@@ -83,13 +83,22 @@ const Portfolio = () => {
                       </p>
                     </CardContent>
                   </Card>
-                </Link>
               </CarouselItem>
             ))}
           </CarouselContent>
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
+          <a href="/projeto/residencia-ic-lagoa-santa">
+            <Button 
+              size="lg"
+              variant="secondary"
+              className="font-inter font-medium text-lg px-8 py-6"
+            >
+              Projetos
+            </Button>
+          </a>
+
       </div>
     </section>
   );
