@@ -76,11 +76,8 @@ Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/c
 assets
 |_ projects
    |_ criar uma pasta para armazenar as fotos (nome ####-#####-####)
-      |_ (	equipment.jpg
-		finishing.jpg
-		foundation.jpg
-		infrastructure.jpg
-		main.jpg )
+      |_ (	infrastructure.jpg
+		    main.jpg )
 
 components
 |_ Portfolio.tsx
