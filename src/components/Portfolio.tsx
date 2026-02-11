@@ -34,7 +34,7 @@ const projects = [
     slug: "cobertura-urbana",
   },
   {
-    title: "Casa L & I",
+    title: "Casa LM",
     description: "Em construção.",
     image: project4,
     slug: "residencia-l-m",
