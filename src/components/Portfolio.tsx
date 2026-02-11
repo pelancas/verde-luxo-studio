@@ -11,7 +11,7 @@ import {
 import project1 from "@/assets/projects/residencia-ic-lagoa-santa/main.jpg";
 import project2 from "@/assets/projects/villa-sustentavel/main.jpg";
 import project3 from "@/assets/projects/cobertura-urbana/main.jpg";
-import project4 from "@/assets/projects/residencia-l-m/main.jpg";
+import project4 from "@/assets/projects/residencia-i-e-l/main.jpg";
 import project5 from "@/assets/projects/villa-m-e-r/main.jpg";
 
 const projects = [
@@ -34,10 +34,10 @@ const projects = [
     slug: "cobertura-urbana",
   },
   {
-    title: "Casa LM",
+    title: "Residência I e L",
     description: "Em construção.",
     image: project4,
-    slug: "residencia-l-m",
+    slug: "residencia-i-e-l",
   },
   {
     title: "Villa M & R",

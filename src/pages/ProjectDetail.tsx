@@ -35,7 +35,7 @@ const projectsData: Record<string, {
     year: "2021",
     area: "955m²",
   },
-    "residencia-l-m": {
+    "residencia-i-e-l": {
     title: "Residência LM",
     description: "Em construção.",
     location: "Nova Lima, MG",
