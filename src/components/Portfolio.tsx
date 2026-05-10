@@ -8,41 +8,32 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import project1 from "@/assets/projects/residencia-ic-lagoa-santa/main.jpg";
-import project2 from "@/assets/projects/villa-sustentavel/main.jpg";
-import project3 from "@/assets/projects/cobertura-urbana/main.jpg";
-import project4 from "@/assets/projects/residencia-i-e-l/main.jpg";
-import project5 from "@/assets/projects/villa-m-e-r/main.jpg";
+import { getProjectCover } from "@/lib/projectImages";
 
 const projects = [
   {
     title: "Residencia T & A",
     description: "Esta residência exclusiva se integra à paisagem das montanhas de Minas Gerais como uma extensão natural do horizonte.",
-    image: project1,
     slug: "residencia-ic-lagoa-santa",
   },
   {
     title: "Villa R & J",
     description: "Estrutura inteligente com captação solar e reuso de água",
-    image: project2,
     slug: "villa-sustentavel",
   },
   {
     title: "Casa I & C",
     description: "A casa foi pensada para valorizar a luz, o silêncio e a contemplação, transformando cada ambiente em um mirante particular.",
-    image: project3,
     slug: "cobertura-urbana",
   },
   {
     title: "Residência I e L",
     description: "Em construção.",
-    image: project4,
     slug: "residencia-i-e-l",
   },
   {
     title: "Villa M & R",
     description: "Em construção.",
-    image: project5,
     slug: "villa-m-e-r",
   },
 ];
@@ -87,7 +78,7 @@ const Portfolio = () => {
                   >
                     <div className="aspect-[16/10] overflow-hidden">
                       <img
-                        src={project.image}
+                        src={getProjectCover(project.slug)}
                         alt={project.title}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       />

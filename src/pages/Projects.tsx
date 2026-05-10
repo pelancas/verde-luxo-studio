@@ -2,28 +2,23 @@ import Header from "@/components/Header";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import Contact from "@/components/Contact";
-import project1 from "@/assets/projects/residencia-ic-lagoa-santa/main.jpg";
-import project2 from "@/assets/projects/villa-sustentavel/main.jpg";
-import project3 from "@/assets/projects/cobertura-urbana/main.jpg";
 import Footer from "@/components/Footer";
+import { getProjectCover } from "@/lib/projectImages";
 
 const projects = [
   {
     title: "Residencia IC Lagoa Santa",
     description: "Sistema de climatização integrada e automação residencial",
-    image: project1,
     slug: "residencia-ic-lagoa-santa",
   },
   {
     title: "Villa Sustentável",
     description: "Estrutura inteligente com captação solar e reuso de água",
-    image: project2,
     slug: "villa-sustentavel",
   },
   {
     title: "Cobertura Urbana",
     description: "Engenharia estrutural para terraço suspenso premium",
-    image: project3,
     slug: "cobertura-urbana",
   },
 ];
@@ -49,7 +44,7 @@ const Projects = () => {
                 <div className="flex flex-col md:flex-row">
                   <div className="md:w-2/5 aspect-[16/10] md:aspect-auto overflow-hidden">
                     <img
-                      src={project.image}
+                      src={getProjectCover(project.slug)}
                       alt={project.title}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     />
