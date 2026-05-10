@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero-architecture.jpg";
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       <div className="absolute inset-0 z-0" style={{
-      backgroundImage: "url(\"/lovable-uploads/58db1bad-aff0-4a36-9dcd-1ef11f575aad.jpg\")",
+      backgroundImage: `url("${import.meta.env.BASE_URL}lovable-uploads/58db1bad-aff0-4a36-9dcd-1ef11f575aad.jpg")`,
       backgroundSize: 'cover',
       backgroundPosition: 'center'
     }}>
