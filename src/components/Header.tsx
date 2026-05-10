@@ -10,6 +10,7 @@ const Header = () => {
   const menuItems = [
     { to: "/", label: "Início", isNavLink: true },
     { to: "/projeto/residencia-ic-lagoa-santa", label: "Projetos", isNavLink: true },
+    { to: "/contato", label: "Contato", isNavLink: true },
   ];
 
   const closeMenu = () => setIsMenuOpen(false);
